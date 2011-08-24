@@ -30,8 +30,7 @@ class WebsitesController < ApplicationController
 
   def visit
     @website = Website.find(params[:id])
-    visit = Visit.new
-    visit.website_id = @website
+    visit = @website.visits.new
     visit.ip = request.remote_ip
     visit.unique = unique?(@website)
     visit.save
