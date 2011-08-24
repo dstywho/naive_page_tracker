@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+put this in your page to track it:
+<pre>
+ &lt;img src=&quot;http://naivepagetracker.heroku.com/<%= visit_website_path(@wrbsite) %>.gif" /&gt; 
+</pre>
+
 <p>
   <b>Url:</b>
   <%= @website.url %>
@@ -16,12 +21,6 @@
 </p>
 
 
-<pre>
-  put this in your page:
-  <code>
- &lt;img src=&quot;domain_name<%= visit_website_path(@website) %>.gif" /&gt; 
-  </code>
-</pre>
 
 
 <%= link_to 'Edit', edit_website_path(@website) %> |
