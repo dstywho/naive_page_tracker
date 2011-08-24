@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyString
+  visits: 1
+  uniques: 1
+
+two:
+  url: MyString
+  visits: 1
+  uniques: 1

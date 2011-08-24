@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @website.url %>
+</p>
+
+<p>
+  <b>Visits:</b>
+  <%= @website.visits.length %>
+</p>
+
+<p>
+  <b>Uniques:</b>
+  <%= @website.visits.uniques.length %>
+</p>
+
+
+<pre>
+  put this in your page:
+  <code>
+ &lt;img src=&quot;domain_name<%= visit_website_path(@website) %>" /&gt; 
+  </code>
+</pre>
+
+
+<%= link_to 'Edit', edit_website_path(@website) %> |
+<%= link_to 'Back', websites_path %>

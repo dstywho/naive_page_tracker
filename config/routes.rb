@@ -1,4 +1,12 @@
 NaivePageTracker::Application.routes.draw do
+  resources :visits
+
+  resources :websites do
+    member do
+      get 'visit'
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
