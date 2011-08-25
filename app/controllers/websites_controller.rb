@@ -27,6 +27,9 @@ class WebsitesController < ApplicationController
     end
   end
 
+def send_blank_gif
+  send_data(Base64.decode64("R0lGODlhAQABAPAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="), :type => "image/gif", :disposition => "inline")
+end
 
   def visit
     @website = Website.find(params[:id])
@@ -41,7 +44,7 @@ class WebsitesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @website }
-      format.gif { render :nothing => true, :status => 200, :content_type => 'image/gif' }
+      format.gif { send_blank_gif }
     end
 
   end
